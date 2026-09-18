@@ -1,0 +1,45 @@
+{
+  "name": "gulp-ts-compile",
+  "version": "1.0.0",
+  "description": "A minimal gulp-typescript replacement built directly on the TypeScript Compiler API's stable, public surface.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jheagle/gulp-ts-compile.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulpplugin",
+    "typescript",
+    "compile"
+  ],
+  "author": "Joshua Heagle <joshuaheagle@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jheagle/gulp-ts-compile/issues"
+  },
+  "homepage": "https://github.com/jheagle/gulp-ts-compile#readme",
+  "dependencies": {
+    "vinyl": "^3.0.0"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0 <7.0.0"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "src"
+  ]
+}
