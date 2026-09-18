@@ -40,6 +40,6 @@
     "node": ">=18"
   },
   "files": [
-    "src"
+    "src/index.js"
   ]
 }
