@@ -1,6 +1,6 @@
 {
   "name": "gulp-ts-compile",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal gulp-typescript replacement built directly on the TypeScript Compiler API's stable, public surface.",
   "type": "module",
   "main": "src/index.js",
@@ -31,6 +31,11 @@
   },
   "peerDependencies": {
     "typescript": ">=5.0.0 <7.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "jest": "^30.5.2",
