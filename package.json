@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/jheagle/gulp-ts-compile#readme",
   "dependencies": {
-    "vinyl": "^3.0.0"
+    "vinyl": "^3.0.1"
   },
   "peerDependencies": {
     "typescript": ">=5.0.0 <7.0.0"
