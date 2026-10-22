@@ -46,6 +46,7 @@ describe('tsCompile', () => {
     mkdirSync(path.join(tempDir, 'functions'), { recursive: true })
     writeFileSync(
       path.join(tempDir, 'functions', 'greet.ts'),
+      // eslint-disable-next-line no-template-curly-in-string -- TypeScript fixture source, not a template
       'export const greet = (name: string): string => `hello ${name}`\n'
     )
 
