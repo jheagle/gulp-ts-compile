@@ -8,7 +8,8 @@
     ".": "./src/index.js"
   },
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "lint": "eslint --fix src eslint.config.mjs"
   },
   "repository": {
     "type": "git",
@@ -38,7 +39,9 @@
     }
   },
   "devDependencies": {
+    "eslint": "^10.13.0",
     "jest": "^30.5.2",
+    "neostandard": "^0.14.1",
     "typescript": "^6.0.3"
   },
   "engines": {
@@ -46,5 +49,9 @@
   },
   "files": [
     "src/index.js"
-  ]
+  ],
+  "allowScripts": {
+    "@parcel/watcher": false,
+    "unrs-resolver": false
+  }
 }
