@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
-    "lint": "eslint --fix src eslint.config.mjs"
+    "lint": "eslint --fix src eslint.config.mjs",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "eslint": "^10.13.0",
     "jest": "^30.5.2",
     "neostandard": "^0.14.1",
+    "release-it": "^21.1.2",
     "typescript": "^6.0.3"
   },
   "engines": {
