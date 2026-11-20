@@ -1,5 +1,7 @@
 # gulp-ts-compile
 
+[![tests](https://github.com/jheagle/gulp-ts-compile/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/jheagle/gulp-ts-compile/actions/workflows/tests.yml)
+
 A minimal [gulp](https://gulpjs.com/) TypeScript plugin, built directly on the `typescript` package's stable,
 public Compiler API - no version-sensitive internal APIs, no JSON-style option strings to translate.
 

@@ -1,0 +1,29 @@
+# Run the checks on every pull request and every push to main. The repo is public, so GitHub Actions on standard
+# runners is free. Make the "tests" check required in the ruleset for main so a PR can't merge while it fails.
+# The same checks as publish.yml (tests, then eslint without --fix); nothing is published.
+name: tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      # --ignore-scripts matches package.json's allowScripts (npm 12 locally; the runner's npm 11 ignores that field)
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      # Without --fix (npm run lint fixes): a lint error fails the check instead of being fixed on the runner
+      - run: npx eslint src eslint.config.mjs
